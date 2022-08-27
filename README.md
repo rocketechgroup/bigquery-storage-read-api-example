@@ -23,3 +23,13 @@ export PROJECT_ID=<replace with your gcp project id>
 
 python main_beam.py --project ${PROJECT_ID} --table  ${PROJECT_ID}:bigquery_examples.usa_1910_current
 ```
+
+## Important Docs
+The [Beam doc](https://beam.apache.org/documentation/io/built-in/google-bigquery/) is out of date and suggesting storage api is not supported by python, this is not true. This example is based on the storage read api. 
+![](docs/out_of_date_beam_doc.png)
+
+To configure direct read via the storage API, see the `method` parameter from [ReadFromBigQuery](https://beam.apache.org/releases/pydoc/current/apache_beam.io.gcp.bigquery.html#apache_beam.io.gcp.bigquery.ReadFromBigQuery)
+![](docs/beam_direct_read.png)
+
+It is possible to filter on the BigQuery table but not clearly documented see the `row_restriction` parameter in class [_CustomBigQueryStorageSource](https://beam.apache.org/releases/pydoc/2.41.0/_modules/apache_beam/io/gcp/bigquery.html)
+![](docs/row_restriction.png)
