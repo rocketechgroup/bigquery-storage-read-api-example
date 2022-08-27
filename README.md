@@ -33,3 +33,5 @@ To configure direct read via the storage API, see the `method` parameter from [R
 
 It is possible to filter on the BigQuery table but not clearly documented see the `row_restriction` parameter in class [_CustomBigQueryStorageSource](https://beam.apache.org/releases/pydoc/2.41.0/_modules/apache_beam/io/gcp/bigquery.html)
 ![](docs/row_restriction.png)
+
+This is also possible with other platforms such as Apache Spark, see [Apache Spark BigQuery Connector — Optimization tips & example Jupyter Notebooks](https://medium.com/google-cloud/apache-spark-bigquery-connector-optimization-tips-example-jupyter-notebooks-f17fd8476309)
