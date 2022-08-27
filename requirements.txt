@@ -1,1 +1,2 @@
 google-cloud-bigquery-storage==2.14.2
+apache-beam[gcp] ==2.41.0
